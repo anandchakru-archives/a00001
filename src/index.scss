@@ -14,14 +14,6 @@
   
 */
 
-$screensizes: xs sm md lg xl;
-
-@each $screensize in $screensizes {
-  .nesign-thumbnail-#{screensize} {
-    background-image: url('./assets/thumbnail-#{$screensize}.jpg');
-  }
-}
-
 html {
   background-position: center center;
   background-repeat: no-repeat;
