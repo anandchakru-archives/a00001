@@ -29,7 +29,7 @@ const takeSs = (browser, id) => {
 }
 (async () => {
   //const browser = await puppeteer.launch({ headless: false, slowMo: 1250, ignoreHTTPSErrors: true, args: ['--no-sandbox'] });
-  const browser = await puppeteer.launch({ ignoreHTTPSErrors: true });
+  const browser = await puppeteer.launch({ ignoreHTTPSErrors: true, args: ['--no-sandbox'] });
   for (let i = 0; i < deviceIds.length; i++) {
     await takeSs(browser, deviceIds[i]);
     await sleep(6000);
