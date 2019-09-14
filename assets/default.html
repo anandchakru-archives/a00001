@@ -1,5 +1,5 @@
 <head><link href="default.css" rel="stylesheet"></head><!-- Custom template goes here -->
-<div class="container fade-in">
+<div class="py-3 container fade-in">
   {{#if guest}}
   <section class="guest mb-4">
     <div class="guest-container d-flex justify-content-center text-muted text-small text-dark bg-none">
@@ -7,7 +7,6 @@
     </div>
   </section>
   {{/if}}
-
 
   <section class="main">
     <div class="jumbotron bg-white shadow-lg">
@@ -75,43 +74,24 @@
   </section>
   {{/if}}
 
-  <section class="details">
-
+  <section class="details mt-5">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="card text-white bg-dark">
+          <div class="card-body">
+            <h5 class="card-title">Venue</h5>
+            <p class="card-text">{{invite.addrText}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card text-white bg-dark">
+          <div class="card-body">
+            <h5 class="card-title">Time</h5>
+            <p class="card-text">{{invite.timeFromString}} - {{endsat invite}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-
-
-
-  <div class="invite-container d-none">
-    <section class="details">
-      <div class="details-address">
-        <div class="details-address-title">Venue</div>
-        <div class="details-address-text">{{invite.addrText}}</div>
-      </div>
-      <div class="details-time">
-        <div class="details-time-title">Time</div>
-        <div class="details-time-from">
-          <div class="details-time-from-title">Starts</div>
-          <div class="details-time-from-text">{{invite.timeFrom}}</div>
-        </div>
-        <div class="details-time-to">
-          <div class="details-time-to-title">Ends</div>
-          <div class="details-time-to-text">{{invite.timeTo}}</div>
-        </div>
-      </div>
-    </section>
-    <section class="slider">
-      {{#sliderPhotos}}
-      <div class="slider-img-container">
-        <img class="slider-img" src="{{url}}" alt="{{title}}">
-        <div class="slider-img-details">
-          <div class="slider-img-title">{{title}}</div>
-          <span class="slider-img-description">{{description}}</span>
-        </div>
-      </div>
-      {{/sliderPhotos}}
-    </section>
-    <section class="footer">
-      Lovely nerds handcrafted this invite @ <a href="http://nivite.jrvite.com" target="_blank"
-        rel="noopener noreferrer">Nivite.com</a>
-    </section>
-  </div><script type="text/javascript" src="default.js"></script>
+</div><script type="text/javascript" src="default.js"></script>
